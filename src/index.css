@@ -1,0 +1,168 @@
+:root{
+	--color-primary: rgba(39, 174, 96, 1);
+	--color-primary-50:  rgba(147, 215, 175, 1);
+	--color-secondary: rgba(235, 87, 87, 1);
+  
+	/* grey scale palets */
+  
+	--gray-100:rgba(51, 51, 51, 1);
+	--gray-50: rgba(130, 130, 130, 1);
+	--gray-20:rgba(224, 224, 224, 1);
+	--gray-0: rgba(245, 245, 245, 1);
+  
+  
+	/* feedback */
+  
+	--negative: #E60000;
+	--warning: #FFCD07;
+	--sucess:#168821;
+	--information: #155BCB;
+}
+* {
+	font-family: 'Inter';
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input:focus {
+	outline: none;
+}
+button {
+	cursor: pointer;
+}
+.container-geral {
+	display: flex;
+	overflow-x: auto;
+	gap: 20px;
+}
+.title {
+	background-color: var(--color-primary);
+	padding: 10px;
+	font-weight: 500;
+	color: white;
+	font-family: 'Inter';
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.price-container {
+	border-top: 2px solid var(--gray-20);
+	width: 100%;
+	background-color: var(--gray-0);
+	font-family: 'Inter';
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	animation: fadeInDown 1s;
+}
+.price-info {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	margin-top: 1rem;
+}
+.total {
+	font-weight: bolder;
+	font-size: 0.9rem;
+}
+.price {
+	font-weight: bolder;
+	font-size: 0.9rem;
+	color: var(--gray-50);
+}
+.button-remove-currentSale {
+	margin: 0 auto;
+	width: 80%;
+	border: none;
+	padding: 20px;
+	background-color: var(--gray-20);
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	transition: 1s;
+}
+.button-remove-currentSale:hover {
+	transition: 1s;
+	background-color: var(--color-secondary);
+}
+.container-products {
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+@media screen and (min-width:1000px) {
+	.container-products {
+		overflow:unset;
+		display: flex;
+		justify-content: center;		
+	}
+	.container-geral {
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 20px;
+		overflow: unset;
+	}
+	.card {
+		width: 33%;
+	}
+	.containerao {
+		width: 70%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+}
